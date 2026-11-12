@@ -12,23 +12,21 @@ def ordina(lista):
                 lista[i+1] = p
                 scambiato = True
 
-parola = input("Inserisci una parola: ")
+def bwt(parola):
+    listaParola = []
+
+    for i in range(len(parola)+1):
+        temp = parola[i:] + "$" + parola[:i]
+        listaParola.append(temp)
 
 
-listaParola = []
+    ordina(listaParola)    
 
-for i in range(len(parola)+1):
-    temp = parola[i:] + "$" + parola[:i]
-    listaParola.append(temp)
+    print(listaParola)
 
+    parolaFinale = ""
 
-ordina(listaParola)    
+    for i in listaParola:
+        parolaFinale = parolaFinale+i[-1]
 
-print(listaParola)
-
-parolaFinale = ""
-
-for i in listaParola:
-    parolaFinale = parolaFinale+i[-1]
-
-print("Parola Algoritmo BWT: " + parolaFinale)
+    return parolaFinale
