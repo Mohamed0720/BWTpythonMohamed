@@ -20,7 +20,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
 
         parolaConvertita = main.bwt(parola)
 
-        conn.sendall(parolaConvertita)
+        conn.sendall(parolaConvertita.encode())
 
 
 

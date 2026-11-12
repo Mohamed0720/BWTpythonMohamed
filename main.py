@@ -29,4 +29,6 @@ def bwt(parola):
     for i in listaParola:
         parolaFinale = parolaFinale+i[-1]
 
+    print("BWT applicato: ", parolaFinale)
+
     return parolaFinale
